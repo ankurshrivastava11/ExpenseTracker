@@ -48,7 +48,7 @@ $(document).ready(function() {
 	
 	$("#loginButton").click(function() {
 		
-		$.post("/ex-tracker/rest/v1/users/auth", JSON.stringify({
+		$.post("/ExpenseTrackerGigster/rest/v1/users/auth", JSON.stringify({
 			"email" : $("#email").val(),
 			"password" : $("#password").val()
 		}),
@@ -75,7 +75,7 @@ $(document).ready(function() {
 	});
 	
 	$("#createButton").click(function() {
-		$.post("/ex-tracker/rest/v1/expenses", JSON.stringify({
+		$.post("/ExpenseTrackerGigster/rest/v1/expenses", JSON.stringify({
 			"dt":$("#dateTime").val(),
 			  "amount":$("#amount").val(),
 			  "email": email,
@@ -94,13 +94,13 @@ $(document).ready(function() {
 		radio = radio.substring(radio.indexOf("_")+1);
 		$.ajax({
 	        type: "DELETE",
-	        url: "/ex-tracker/rest/v1/expenses/"+radio,
+	        url: "/ExpenseTrackerGigster/rest/v1/expenses/"+radio,
 	        contentType: "application/x-www-form-urlencoded; charset=utf-8",
 	        success: function (result) {
 	        	alert("Row deleted successfully");
 	    		$.ajax({
 	    	        type: "GET",
-	    	        url: "/ex-tracker/rest/v1/expenses?email="+email+"&admin="+isAdmin,
+	    	        url: "/ExpenseTrackerGigster/rest/v1/expenses?email="+email+"&admin="+isAdmin,
 	    	        contentType: "application/json; charset=utf-8",
 	    	        dataType: "json",
 	    	        success: function (data, status, jqXHR) {
@@ -136,7 +136,7 @@ $(document).ready(function() {
 			} else {
 				$("#updateButton").html('Edit');
 				tds.prop('contenteditable', false);
-				$.post("/ex-tracker/rest/v1/expenses/update", JSON.stringify({
+				$.post("/ExpenseTrackerGigster/rest/v1/expenses/update", JSON.stringify({
 					  "dt": $("#dateTime_"+radio).text(),
 					  "amount":$("#amount_"+radio).text(),
 					  "email": email,
@@ -149,7 +149,7 @@ $(document).ready(function() {
 			        	alert("Row updates successfully");
 			    		$.ajax({
 			    	        type: "GET",
-			    	        url: "/ex-tracker/rest/v1/expenses?email="+email+"&admin="+isAdmin,
+			    	        url: "/ExpenseTrackerGigster/rest/v1/expenses?email="+email+"&admin="+isAdmin,
 			    	        contentType: "application/json; charset=utf-8",
 			    	        dataType: "json",
 			    	        success: function (data, status, jqXHR) {
@@ -178,7 +178,7 @@ $(document).ready(function() {
 	
 		$.ajax({
 	        type: "GET",
-	        url: "/ex-tracker/rest/v1/expenses?email="+email+"&admin="+isAdmin,
+	        url: "/ExpenseTrackerGigster/rest/v1/expenses?email="+email+"&admin="+isAdmin,
 	        contentType: "application/json; charset=utf-8",
 	        dataType: "json",
 	        success: function (data, status, jqXHR) {
@@ -201,7 +201,7 @@ $(document).ready(function() {
 		
 		$.ajax({
 	        type: "POST",
-	        url: "/ex-tracker/rest/v1/expenses/range",
+	        url: "/ExpenseTrackerGigster/rest/v1/expenses/range",
 	        data: JSON.stringify({
 	          "end_dt":$("#endDateTime").val(),
 			  "start_dt":$("#startDateTime").val(),
@@ -237,7 +237,7 @@ $(document).ready(function() {
 		
 		$.ajax({
 	        type: "POST",
-	        url: "/ex-tracker/rest/v1/expenses/range",
+	        url: "/ExpenseTrackerGigster/rest/v1/expenses/range",
 	        data: JSON.stringify({
 	          "end_dt": "",
 			  "start_dt": "",
