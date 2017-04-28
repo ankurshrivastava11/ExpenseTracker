@@ -71,6 +71,7 @@
 					<li style = "display:none" id= "view-expenses-li"><a href="#view-expenses" class="page-scroll">Expenses</a></li>
 					<li style = "display:none" id = "create-li"><a href="#create" class="page-scroll">Create</a></li>
 					<li style = "display:none" id = "report-li"><a href="#report" class="page-scroll">Report</a></li>
+					<li style = "display:none" id = "logout-li"><a href="#">Logout</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -264,7 +265,7 @@
 						<ul class="cat">
 							<li>
 								<ol class="type">
-									<li><a href="#" class="active" id="weeklyButton">Weekly</a></li>
+									<li><a href="#" id="weeklyButton">Weekly</a></li>
 									<li><a href="#" id="customButton">Custom</a></li>
 								</ol>
 							</li>
@@ -356,53 +357,6 @@
 			</section>
 			<!-- /.content -->
 
-		</div>
-	</div>
-	<!-- Call Reservation Section -->
-	<div id="call-reservation" class="text-center" hidden="">
-		<div class="container">
-			<h2>
-				Want to make a reservation? Call <strong>1-887-654-3210</strong>
-			</h2>
-		</div>
-	</div>
-	<!-- Contact Section -->
-	<div id="contact" class="text-center" hidden="">
-		<div class="container">
-			<div class="section-title text-center">
-				<h2>Contact Form</h2>
-				<hr>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis
-					sed.</p>
-			</div>
-			<div class="col-md-10 col-md-offset-1">
-				<form name="sentMessage" id="contactForm" novalidate>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" id="name" class="form-control"
-									placeholder="Name" required="required">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="email" id="email" class="form-control"
-									placeholder="Email" required="required">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<textarea name="message" id="message" class="form-control"
-							rows="4" placeholder="Message" required></textarea>
-						<p class="help-block text-danger"></p>
-					</div>
-					<div id="success"></div>
-					<button type="submit" class="btn btn-custom btn-lg">Send
-						Message</button>
-				</form>
-			</div>
 		</div>
 	</div>
 	<div id="footer">
