@@ -18,7 +18,7 @@ public class browsertest {
 	@Test
 	public void verifytitle() {
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://localhost:8080/ex-tracker/");
+		driver.get("http://localhost:8080/ExpenseTrackerGigster/index.jsp");
 		String title = driver.getTitle();
 		Assert.assertTrue(title.contains("Tracker"));
 	}
@@ -26,7 +26,7 @@ public class browsertest {
 	@Test
 	public void Login() {
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://localhost:8080/ex-tracker/");
+		driver.get("http://localhost:8080/ExpenseTrackerGigster/index.jsp");
 		WebElement username = driver.findElement(By.id("email"));
 		username.sendKeys("test1@test.com");
 		WebElement password = driver.findElement(By.id("password"));
@@ -40,7 +40,7 @@ public class browsertest {
 	@Test
 	public void authenticateValidCredentials() {
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://localhost:8080/ex-tracker/");
+		driver.get("http://localhost:8080/ExpenseTrackerGigster/index.jsp");
 		WebElement username = driver.findElement(By.id("email"));
 		username.sendKeys("test1@test.com");
 		WebElement password = driver.findElement(By.id("password"));
@@ -54,7 +54,7 @@ public class browsertest {
 	@Test
 	public void authenticateInvalidCredentials() {
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://localhost:8080/ex-tracker/");
+		driver.get("http://localhost:8080/ExpenseTrackerGigster/index.jsp);
 		WebElement username = driver.findElement(By.id("email"));
 		username.sendKeys("test1@test.com");
 		WebElement password = driver.findElement(By.id("password"));
@@ -68,7 +68,7 @@ public class browsertest {
 	@Test
 	public void viewCreatedExpense() {
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://localhost:8080/ex-tracker/");
+		driver.get("http://localhost:8080/ExpenseTrackerGigster/index.jsp");
 		WebElement username = driver.findElement(By.id("email"));
 		username.sendKeys("test1@test.com");
 		WebElement password = driver.findElement(By.id("password"));
@@ -99,7 +99,7 @@ public class browsertest {
 	public void report()
 	{
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://localhost:8080/ex-tracker/");
+		driver.get("http://localhost:8080/ExpenseTrackerGigster/index.jsp");
 		WebElement username = driver.findElement(By.id("email"));
 		username.sendKeys("test1@test.com");
 		WebElement password = driver.findElement(By.id("password"));
